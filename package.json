@@ -1,0 +1,40 @@
+{
+  "name": "orbital-edge-imaging",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/server": "^11.11.0",
+    "@mantine/core": "^6.0.19",
+    "@mantine/dates": "^6.0.19",
+    "@mantine/dropzone": "^6.0.19",
+    "@mantine/hooks": "^6.0.19",
+    "@mantine/next": "^6.0.19",
+    "@sentinel-hub/sentinelhub-js": "^0.3.8",
+    "@tabler/icons-react": "^2.30.0",
+    "@turf/turf": "^6.5.0",
+    "@types/node": "20.5.0",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "dayjs": "^1.11.9",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.13",
+    "leaflet": "^1.9.4",
+    "next": "13.4.13",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-leaflet": "^4.2.1",
+    "react-leaflet-draw": "^0.20.4",
+    "typescript": "5.1.6",
+    "valtio": "^1.11.2"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.3"
+  }
+}

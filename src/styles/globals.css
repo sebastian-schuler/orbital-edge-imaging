@@ -1,0 +1,18 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Leaflet Draw Overrides */
+
+.leaflet-draw-actions a{
+    background-color: white !important;
+    color: black !important;
+}
+
+.leaflet-draw-actions a:hover{
+    background-color: #e6e6e6 !important;
+}
+
+.sr-only {
+    display: none;
+}
