@@ -9,6 +9,8 @@ This is a proof-of-concept web application for a (fictional) startup called "Orb
 
 This project uses the [OGC API of Sentinel Hub](https://www.sentinel-hub.com/develop/api/ogc/) to search and download satellite imagery. You're required to sign up for an account to use this project, a free trial account receives 30 000 units.
 
+![](https://github.com/sebastian-schuler/orbital-edge-imaging/blob/main/ogc-service-optimized.gif)
+
 ## Installation
 
 First, clone the repo, then install the dependencies:
