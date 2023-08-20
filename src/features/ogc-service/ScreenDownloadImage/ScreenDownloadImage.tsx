@@ -45,7 +45,13 @@ const ScreenDownloadImage = () => {
                                     </div>
                                     <div>
                                         {mapImage && imageFormat && (
-                                            <Anchor component='a' href={URL.createObjectURL(mapImage)} color='primaryRed.3' download={`map.${imageFormat.toLowerCase()}`}>Download</Anchor>
+                                            <Anchor
+                                                component='a'
+                                                href={URL.createObjectURL(mapImage)}
+                                                color='primaryRed.3'
+                                                download={`map.${imageFormat.toLowerCase()}`}
+                                                data-cy='download-image-link'
+                                            >Download</Anchor>
                                         )}
                                     </div>
                                 </>

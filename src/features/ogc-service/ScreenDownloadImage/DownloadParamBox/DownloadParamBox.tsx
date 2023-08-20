@@ -109,6 +109,7 @@ const DownloadParamBox = ({ isFetching, setIsFetching }: DownloadParamBoxProps) 
               input: classes.inputBox
             }}
             title='Image format to download'
+            data-cy='image-format-select'
           />
         </div>
 
@@ -123,6 +124,7 @@ const DownloadParamBox = ({ isFetching, setIsFetching }: DownloadParamBoxProps) 
           onClick={fetchMapImage}
           loading={isFetching}
           title='Download map image'
+          data-cy='download-image-button'
         >Get Image</Button>
 
       </Stack>

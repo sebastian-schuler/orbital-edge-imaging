@@ -63,6 +63,7 @@ const FlyoverCard = ({ index, flyover, onClick }: FlyoverCardProps) => {
                     ml={'md'}
                     onClick={() => onClick(index, flyover)}
                     title={`Select flyover ${index + 1}`}
+                    data-cy='select-flyover-button'
                 >
                     <IconArrowBigRightFilled size='1.125rem' />
                 </ActionIcon>

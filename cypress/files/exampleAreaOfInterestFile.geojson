@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "AOI_technicalChallenge",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1 }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 11.259616732062792, 48.136020266956429 ], [ 11.343418275294294, 48.137261771300594 ], [ 11.34403902746638, 48.0491149628645 ], [ 11.257754475546536, 48.047873458520328 ], [ 11.259616732062792, 48.136020266956429 ] ] ] ] } }
+]
+}

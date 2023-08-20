@@ -60,6 +60,7 @@ const SearchParamBox = ({ fetchSearchResults, isFetching }: SearchParamBoxProps)
                             input: classes.inputBox
                         }}
                         title='Layer to display'
+                        data-cy='layer-select'
                     />
                 </Stack>
 
@@ -79,6 +80,7 @@ const SearchParamBox = ({ fetchSearchResults, isFetching }: SearchParamBoxProps)
                         }}
                         maxDate={new Date()}
                         title='Date range to search through'
+                        data-cy='date-range'
                     />
                 </Stack>
 
@@ -102,6 +104,7 @@ const SearchParamBox = ({ fetchSearchResults, isFetching }: SearchParamBoxProps)
                         label={(value) => `${value} %`}
                         mb={'md'}
                         title='Maximum cloud coverage percentage'
+                        data-cy='cloud-cover-slider'
                     />
                 </Stack>
 
@@ -110,6 +113,7 @@ const SearchParamBox = ({ fetchSearchResults, isFetching }: SearchParamBoxProps)
                     loading={isFetching}
                     disabled={isSearchDisabled()}
                     title='Search for flyovers'
+                    data-cy='search-flyovers-button'
                 >Search Flyovers</Button>
             </Stack>
         </Paper>

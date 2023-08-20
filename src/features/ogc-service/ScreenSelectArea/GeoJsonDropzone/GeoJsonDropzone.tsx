@@ -73,6 +73,7 @@ const GeoJsonDropzone = ({ geoJsonFile, setGeoJsonFile }: GeoJsonDropzoneProps) 
                     'application/vnd.geo+json': ['.geojson', '.json'],
                 }
             }
+            data-cy={'geojson-dropzone'}
         >
             <Stack align='center' style={{ pointerEvents: 'none' }}>
                 <Dropzone.Accept>

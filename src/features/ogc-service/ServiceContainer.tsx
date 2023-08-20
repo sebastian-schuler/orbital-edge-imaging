@@ -136,6 +136,7 @@ const ServiceContainer = () => {
               component='a' fullWidth variant='default'
               disabled={!shouldAllowSelectStep(activeStep - 1)}
               onClick={() => handleStepChange(activeStep - 1)}
+              data-cy='back-button'
             >Back</Button>
           }
         </Grid.Col>
@@ -147,6 +148,7 @@ const ServiceContainer = () => {
               component='a' fullWidth
               disabled={!shouldAllowSelectStep(activeStep + 1)}
               onClick={() => handleStepChange(activeStep + 1)}
+              data-cy='continue-button'
             >Continue</Button>
           }
         </Grid.Col>
