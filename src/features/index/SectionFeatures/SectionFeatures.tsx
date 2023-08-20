@@ -1,4 +1,4 @@
-import { Card, Container, SimpleGrid, Text, Title, rem } from '@mantine/core';
+import { Box, Card, Container, SimpleGrid, Text, Title, rem } from '@mantine/core';
 import { IconGauge, IconMap2, IconUser } from '@tabler/icons-react';
 import useStyles from './SectionFeatures.styles';
 
@@ -43,7 +43,7 @@ const SectionFeatures = () => {
     ));
 
     return (
-        <Container size="lg" py="xl">
+        <Box py="xl">
 
             <Title order={2} className={classes.title} ta="center" mt="sm">
                 Download satellite imagery effortlessly
@@ -56,7 +56,7 @@ const SectionFeatures = () => {
             <SimpleGrid cols={3} spacing="xl" mt={50} breakpoints={[{ maxWidth: 'md', cols: 1 }]}>
                 {features}
             </SimpleGrid>
-        </Container>
+        </Box>
     );
 }
 

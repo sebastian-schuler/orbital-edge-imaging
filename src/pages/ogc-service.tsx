@@ -1,6 +1,7 @@
 import Boundary from '@/components/Boundary/Boundary';
 import { Loader, Stack, Title } from '@mantine/core';
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 
 /**
  * OGC Service page, contains all OGC Service components
@@ -24,9 +25,15 @@ const OgcServicePage = () => {
     );
 
     return (
-        <Boundary>
-            <Map />
-        </Boundary>
+        <>
+            <Head>
+                <title>OGC Service - Orbital Edge Imaging</title>
+            </Head>
+
+            <Boundary>
+                <Map />
+            </Boundary>
+        </>
     )
 }
 

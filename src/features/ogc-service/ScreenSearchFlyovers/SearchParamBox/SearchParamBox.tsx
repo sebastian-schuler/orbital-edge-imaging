@@ -30,7 +30,7 @@ const SearchParamBox = ({ fetchSearchResults, isFetching }: SearchParamBoxProps)
      * Check if search button should be disabled, based on if all required fields are filled
      */
     const isSearchDisabled = () => {
-        return isFetching || !layerId || !dateRange[0] || !dateRange[1] || !bounds;
+        return !layerId || !dateRange[0] || !dateRange[1] || !bounds;
     };
 
     /**

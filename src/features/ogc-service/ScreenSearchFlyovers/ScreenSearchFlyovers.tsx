@@ -139,7 +139,7 @@ const ScreenSearchFlyovers = ({ handleStepChange }: ScreenSearchFlyoversProps) =
         }
 
         return () => { }
-    }, [sortBy]);
+    }, [sortBy, flyovers.length]);
 
     return (
         <Stack>

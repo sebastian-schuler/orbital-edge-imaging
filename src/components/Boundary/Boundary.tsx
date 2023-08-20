@@ -8,6 +8,9 @@ type Props = {
   paddingTop?: boolean
 } & ContainerProps
 
+/**
+ * Boundary component, acts as a container for other components, standardizes padding and margins
+ */
 const Boundary = ({ children, paddingBottom, paddingTop, ...props }: Props) => {
 
   const { classes, theme } = useStyles();
@@ -18,8 +21,8 @@ const Boundary = ({ children, paddingBottom, paddingTop, ...props }: Props) => {
       size={'xl'}
       className={classes.containerPaddingX}
       sx={{
-        paddingTop: paddingTop ? theme.spacing.lg : 0,
-        paddingBottom: paddingBottom ? theme.spacing.lg : 0,
+        paddingTop: paddingTop ? theme.spacing.lg : undefined,
+        paddingBottom: paddingBottom ? theme.spacing.lg : undefined,
       }}
       {...props}
     >

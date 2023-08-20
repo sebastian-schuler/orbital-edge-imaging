@@ -1,15 +1,22 @@
-import { Anchor, Container, Group } from '@mantine/core';
+import Boundary from '@/components/Boundary/Boundary';
+import { Anchor, Group } from '@mantine/core';
 import PageLogo from '../PageLogo';
 import useStyles from './Footer.styles';
 
+// Data 
+const links = [
+    { label: 'Home', link: '/' },
+    { label: 'OGC Service', link: '/ogc-service' },
+];
+
+/**
+ * Footer component, contains links to other pages
+ */
 const Footer = () => {
 
-    const links = [
-        { label: 'About', link: '#' },
-        { label: 'Contact', link: '#' },
-    ];
+    const { classes, theme } = useStyles();
 
-    const { classes } = useStyles();
+    // Create links 
     const items = links.map((link) => (
         <Anchor<'a'>
             color='dimmed'
@@ -24,10 +31,22 @@ const Footer = () => {
 
     return (
         <div className={classes.footer}>
-            <Container className={classes.inner}>
+            <Boundary
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    paddingTop: theme.spacing.xl,
+                    paddingBottom: theme.spacing.xl,
+
+                    [theme.fn.smallerThan('xs')]: {
+                        flexDirection: 'column',
+                    },
+                }}
+            >
                 <PageLogo />
                 <Group className={classes.links}>{items}</Group>
-            </Container>
+            </Boundary>
         </div>
     );
 }

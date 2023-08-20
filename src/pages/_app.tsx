@@ -13,7 +13,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Page title</title>
+        <title>Orbital Edge Imaging</title>
+        <meta name='description' content='Search and download satellite imagery with specific filters, timestamps and more' />
+        <meta name='keywords' content='web map service, wms, ogc, satellite imagery' />
         <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width' />
       </Head>
 

@@ -1,5 +1,5 @@
 import { appState } from '@/util/State'
-import { formatDateAndTime } from '@/util/utils'
+import { formatDateAndTime, roundTo } from '@/util/utils'
 import { Group, Paper, Stack, Text, Title } from '@mantine/core'
 import { IconCalendar, IconCloud, IconWorld } from '@tabler/icons-react'
 import { useSnapshot } from 'valtio'
@@ -17,6 +17,9 @@ const SelectedFlyoverCard = () => {
     const dateFrom = new Date(selectedFlyover.fromTime);
     const formattedDateFrom = formatDateAndTime(dateFrom);
 
+    const cloudCoverage = roundTo(selectedFlyover.cloudCover, 2);
+    const imageCoverage = roundTo(selectedFlyover.imageCover, 2);
+
     return (
         <div>
             <Text fw={500} size={'sm'} color='primaryRed' lh={1}>Selected</Text>
@@ -33,7 +36,7 @@ const SelectedFlyoverCard = () => {
                 <Group spacing={'sm'} noWrap>
                     <IconCloud size={22} />
                     <div>
-                        <Text>{selectedFlyover?.cloudCover} %</Text>
+                        <Text>{cloudCoverage} %</Text>
                         <Text size='xs' color='dimmed'>Cloud Coverage</Text>
                     </div>
                 </Group>
@@ -41,7 +44,7 @@ const SelectedFlyoverCard = () => {
                 <Group spacing={'sm'} noWrap>
                     <IconWorld size={22} />
                     <div>
-                        <Text>{selectedFlyover?.imageCover} %</Text>
+                        <Text>{imageCoverage} %</Text>
                         <Text size='xs' color='dimmed'>Image Coverage</Text>
                     </div>
                 </Group>

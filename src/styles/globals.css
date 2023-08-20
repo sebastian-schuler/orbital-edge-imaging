@@ -2,14 +2,19 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 /* Leaflet Draw Overrides */
 
-.leaflet-draw-actions a{
+.leaflet-draw-actions a {
     background-color: white !important;
     color: black !important;
 }
 
-.leaflet-draw-actions a:hover{
+.leaflet-draw-actions a:hover {
     background-color: #e6e6e6 !important;
 }
 

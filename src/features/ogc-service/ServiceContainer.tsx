@@ -96,7 +96,7 @@ const ServiceContainer = () => {
       const newDim = calcBoundsPixelDimensions(bounds, map);
       appState.pixelDimensions = newDim;
     }
-  }, [bounds]);
+  }, [bounds, map]);
 
   return (
     <Stack>
@@ -116,7 +116,7 @@ const ServiceContainer = () => {
           />
         </Stepper.Step>
 
-        <Stepper.Step label='Search Entries' allowStepSelect={shouldAllowSelectStep(1)}>
+        <Stepper.Step label='Search Flyovers' allowStepSelect={shouldAllowSelectStep(1)}>
           <ScreenSearchFlyovers
             handleStepChange={handleStepChange}
           />

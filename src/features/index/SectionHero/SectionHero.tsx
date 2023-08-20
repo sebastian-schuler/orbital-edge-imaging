@@ -13,7 +13,7 @@ const SectionHero = () => {
 
     return (
         <div className={classes.root}>
-            <Boundary size="lg">
+            <Boundary>
                 <div className={classes.inner}>
                     <div className={classes.content}>
 
