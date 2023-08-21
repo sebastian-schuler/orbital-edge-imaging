@@ -51,6 +51,8 @@ npm run cypress
 
 ![](https://github.com/sebastian-schuler/orbital-edge-imaging/blob/main/ogc-service-draw-area.gif)
 
+![](https://github.com/sebastian-schuler/orbital-edge-imaging/blob/main/cypress/downloads/map.jpeg)
+
 ## Libraries and Frameworks
 
 - [Next.js](https://nextjs.org/)
