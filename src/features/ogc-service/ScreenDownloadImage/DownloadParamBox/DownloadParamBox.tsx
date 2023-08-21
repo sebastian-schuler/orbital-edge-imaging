@@ -7,6 +7,7 @@ import { useState } from 'react'
 import { ref, useSnapshot } from 'valtio'
 import DimensionsInput from './DimensionsInput/DimensionsInput'
 import useStyles from './DownloadParamBox.styles'
+import { notifications } from '@mantine/notifications';
 
 type DownloadParamBoxProps = {
   isFetching: boolean
@@ -76,20 +77,30 @@ const DownloadParamBox = ({ isFetching, setIsFetching }: DownloadParamBoxProps) 
       },
       body: JSON.stringify(formData)
     }).catch((err) => {
-      console.error(err);
+      notifications.show({
+        title: 'Error',
+        message: err.message,
+      });
       return null;
     });
 
-    // If res is null, skip fetch
-    // TODO: Add error message
     if (!res) {
       setIsFetching(false);
       return;
     }
 
-    // Set map image
-    const json: GetMapResData = await res.blob();
-    appState.mapImage = ref(json);
+    if (res.ok) {
+      // Set map image
+      const json: GetMapResData = await res.blob();
+      appState.mapImage = ref(json);
+    } else {
+      notifications.show({
+        title: 'Error: Invalid parameters',
+        message: 'Could not fetch map image. Please check your parameters and try again.',
+      });
+      appState.mapImage = null;
+    }
+
     setIsFetching(false);
   }
 

@@ -17,6 +17,7 @@
     "@mantine/dropzone": "^6.0.19",
     "@mantine/hooks": "^6.0.19",
     "@mantine/next": "^6.0.19",
+    "@mantine/notifications": "^6.0.19",
     "@sentinel-hub/sentinelhub-js": "^0.3.8",
     "@tabler/icons-react": "^2.30.0",
     "@turf/turf": "^6.5.0",

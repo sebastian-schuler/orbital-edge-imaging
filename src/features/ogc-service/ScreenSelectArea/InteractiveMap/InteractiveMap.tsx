@@ -43,6 +43,7 @@ const InteractiveMap = ({ setMap, featureGroupRef }: InteractiveMapProps) => {
                     }}
                     edit={{
                         edit: false,
+                        remove: false,
                     }}
                     onDrawStart={(e) => {
                         featureGroupRef.current?.clearLayers();
@@ -56,7 +57,6 @@ const InteractiveMap = ({ setMap, featureGroupRef }: InteractiveMapProps) => {
                         setIsOriginalBoundingVisible(true);
                     }}
                     onDeleted={(e) => {
-                        console.log(e);
                         appState.bounds = null;
                     }}
                 />

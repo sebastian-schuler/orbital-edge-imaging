@@ -33,7 +33,7 @@ const SectionHero = () => {
                             component={Link}
                             href="/ogc-service"
                             variant="filled"
-                            size="xl"
+                            size="lg"
                             className={classes.control}
                             mt={40}
                         >

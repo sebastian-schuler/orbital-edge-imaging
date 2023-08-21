@@ -35,6 +35,12 @@ export default async function handler(
         return;
     }
 
+    // Validate width and height
+    if (width < 1 || height < 1 || width > 1000 || height > 1000) {
+        res.status(400).send(`Invalid width or height (min: 1, max: 1000)`);
+        return;
+    }
+
     // Create layer instance
     const layer = new S2L1CLayer({
         instanceId: process.env.SENTINEL_INSTANCE_ID,

@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { MantineProvider } from '@mantine/core';
 import IAppShell from '@/features/nav/AppShell';
 import appTheme from '@/styles/theme';
+import { Notifications } from '@mantine/notifications';
 
 /**
  * Custom App component, used to initialize MantineProvider
@@ -27,6 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
           colorScheme: 'light',
         }}
       >
+        <Notifications />
         <IAppShell>
           <Component {...pageProps} />
         </IAppShell>

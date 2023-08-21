@@ -8,6 +8,7 @@ import { useSnapshot } from 'valtio'
 import FlyoverCard from './FlyoverCard/FlyoverCard'
 import ResultHeader from './ResultHeader/ResultHeader'
 import SearchParamBox from './SearchParamBox/SearchParamBox'
+import { notifications } from '@mantine/notifications'
 
 type ScreenSearchFlyoversProps = {
     handleStepChange: (nextStep: number) => void
@@ -91,8 +92,11 @@ const ScreenSearchFlyovers = ({ handleStepChange }: ScreenSearchFlyoversProps) =
         });
 
         // If res is null, skip fetch
-        // TODO: Add error message
         if (!res) {
+            notifications.show({
+                title: 'Error',
+                message: 'Could not fetch flyovers, please try again later.',
+            });
             setIsFetching(false);
             return;
         }
